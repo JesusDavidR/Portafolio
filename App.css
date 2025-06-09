@@ -1,0 +1,175 @@
+:root{
+  background:radial-gradient(at top, rgb(255, 255, 255), hsl(115, 5%, 48%));
+.tw-followcard {
+  display:flex;
+  align-items: center;
+  color: #000000;
+  font-size: .8rem;
+  justify-content: space-between;
+  font-family:"Inter", "Bebas Neue", system-ui;
+  height:90dvh;
+  
+  min-height: 200px;
+}
+.imagen{
+display: flex;
+flex-direction: column; 
+align-items: center;
+gap: 20px;
+
+
+}
+
+
+.info{
+  display: flex;  /*  Poner en línea */
+  gap: 2px;       /*  Espacio entre el nombre y el apellido */
+  flex-direction: column; /*  Define si los elementos van en fila o columna. */
+  align-items: center; /*  Alinea los elementos en el eje contrario a flex-direction. */
+  font-size: 3rem;
+  font-family:"Inter", "Bebas Neue", system-ui;
+}
+.carrera{
+  display: flex;  /*  Poner en línea */
+  gap: 0px;       /*  Espacio entre el nombre y el @ */
+  
+  font-size: 1.6rem;
+  font-family:"Roboto Mono","Inter", "Bebas Neue", system-ui;
+  text-transform: uppercase; /*Transforma en mayusculas*/
+}
+}
+.social-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px; /* Espacio entre los íconos */
+  margin-top: 0px;
+  margin-bottom:10px;
+}
+
+.social-item {
+
+  position: relative;
+display: inline-block;
+
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 5px; /* Espacio entre icono y texto */
+}
+
+.social-item img {
+  width: 40px; /* Ajusta el tamaño de los íconos */
+  height: 40px;
+}
+
+.social-item span {
+  font-family: "Inter",system-ui;
+  margin-top: 5px; /* Espaciado entre icono y texto */
+  font-size: 12px;
+  display: none; /* Ocultar nombres por defecto */
+  opacity: 0.10;
+ 
+  position: absolute;
+  bottom: -30px; /* Ajusta la distancia del nombre */
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: rgba(0, 0, 0, 0.7); /* Fondo oscuro con transparencia */
+  color: white;
+  padding: 5px 10px;
+  border-radius: 8px;
+  
+  white-space: nowrap;
+  
+  transition: opacity 0.3s ease-in-out;
+}
+
+.social-item:hover span {
+  display: block; /* Mostrar solo cuando pasen el mouse */
+ 
+  opacity: 1;
+}
+.imgcontainer {
+  width: 200px;  /* Tamaño del contenedor */
+  height: 200px; 
+  border-radius: 50%; /* Hace que el contenedor sea un círculo */
+  overflow: hidden; /* Evita que la imagen sobresalga */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative; /* Permite posicionar elementos dentro */
+  margin-top: 20px; /* Baja la imagen */
+  background-color: #ffffff;
+  border: 5px solid #000000; /* Amarillo dorado */
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2); /* Sombra suave */
+}
+
+.avatar {
+  width: 280px; /* Más grande para hacer zoom-out */
+  height: 200px; /* Mantiene la proporción */
+  object-fit: cover; /* Recorta la imagen sin distorsionarla */
+  object-position: 0px 10%; /* Ajusta la posición dentro del círculo */
+}
+.IconSun{
+  position: absolute;
+  top: 10px; /* Ajusta la distancia desde arriba */
+  right: 20px; /* Ajusta la distancia desde la derecha */
+  width: 50px; /* Ajusta el tamaño del icono */
+  height: 50px;
+  cursor:pointer;
+}
+.descripcion{
+  font-family:"Roboto Mono","Inter", "Bebas Neue", system-ui; 
+  text-align: center;
+  max-width: 700px;
+  margin-bottom:10px;
+
+}
+.tw-followcard-button{
+  margin-left: 16px;
+  border:0;
+  border-radius: 999px;
+  padding: 6px 16px;
+  font-weight: bold;
+}
+.hover{
+  color: #fff;
+  border:0;
+  border-radius: 999px;
+  padding: 6px 16px;
+  font-weight: bold;
+  background-color: #0987f2;
+  margin-left: 1px; /* Baja la imagen */
+  margin-bottom: 20px;
+  cursor:pointer;
+}
+
+[data-theme='dark']{
+  background:radial-gradient(at top, rgb(42, 42, 42), hsl(0, 0%, 0%));
+  .tw-followcard {
+      
+      color: #fff;
+      
+  }
+  .imgcontainer {
+      width: 200px;  /* Tamaño del contenedor */
+      height: 200px; 
+      background: none;
+      margin-top: 20px; /* Baja la imagen */
+      border: 5px solid #ffffff; /* Amarillo dorado */
+      box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2); /* Sombra suave */
+  }
+  .avatar{
+  width: 180px;
+  height:180px;
+
+  object-fit: cover; /* Recorta la imagen sin distorsionarla */
+  object-position: 10px 80%; /* Ajusta la posición dentro del círculo */
+}
+  
+ 
+  .hover{
+      color: #fff;
+      background-color: #d38c07;
+  }
+}
